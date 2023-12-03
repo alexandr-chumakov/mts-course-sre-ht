@@ -13,7 +13,11 @@ export let options = {
     { duration: '1m', target: 50 },  // Start with 50 RPS for 1 minute
     { duration: '1m', target: 100 }, // Increase to 100 RPS for the next 1 minute
     { duration: '1m', target: 150 }, // Increase to 150 RPS for the next 1 minute
-    { duration: '1m', target: 250 }
+    { duration: '1m', target: 250 }, 
+    { duration: '1m', target: 500 }, 
+    { duration: '1m', target: 700 }, 
+    { duration: '1m', target: 900 }, 
+    { duration: '1m', target: 1000 }, 
   ],
 };
 
