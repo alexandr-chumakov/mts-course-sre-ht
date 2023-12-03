@@ -74,8 +74,15 @@ K6_INFLUXDB_TOKEN=<insert-here-valid-token> \
 
 https://github.com/szkiba/xk6-yaml
 
+Согласно README репозитория xk6-yaml необходимо выполнить стандартно
 ```console
 xk6 build --with github.com/szkiba/xk6-yaml@latest
+```
+Но xk6 пересобирает бинарник k6, в которой потеряется расширение для influx-db. 
+Воспользуемся тем, что `--with` поддерживает многократный вызов и соберем единый k6
+
+```console
+xk6 build --with github.com/grafana/xk6-output-influxdb --with github.com/szkiba/xk6-yaml@latest
 ```
 
 Теперь всё готово для нагрузочного тестирования нашего стенда.
