@@ -6,7 +6,7 @@ const configfile = open("../config.yaml");
 
 
 export default function () {
-	const config = YAML.parse(configfile);
+	const config = parse(configfile);
 	const hostname = config.hostname
 	console.log(`Line from file: ${hostname}`);
 	
