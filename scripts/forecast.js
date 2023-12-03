@@ -32,18 +32,18 @@ export default function () {
 					},
 				};
 
-	const getResponse = http.get(url, params);
+	const getResponseForecast = http.get(url, params);
 
 	// Check if the GET request was successful
-	check(getResponse, {
+	check(getResponseForecast, {
 	'GET Success Forecast': (res) => res.status === 200,
 	});
 
 	const randomCityID = randomInt(1, 1107);
-	const getResponse = http.get(`${url}/Forecast/${randomCityID}` , params);
+	const getResponseForecastCity = http.get(`${url}/Forecast/${randomCityID}` , params);
 
 	// Check if the GET request was successful
-	check(getResponse, {
+	check(getResponseForecastCity, {
 	'GET Success Forecast for City': (res) => res.status === 200,
 	});
 	
