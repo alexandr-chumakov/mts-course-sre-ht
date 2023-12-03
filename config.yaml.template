@@ -1,1 +1,2 @@
 hostname: 'put your hostname'
+address: 'http.../api/v1'
