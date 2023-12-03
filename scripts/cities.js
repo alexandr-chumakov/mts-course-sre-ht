@@ -25,13 +25,15 @@ export let options = {
 export default function () {
 
 	const url = `${addressOfAPI}/Cities`; // Replace with your API endpoint
-	const headers = {
-				'Content-Type': 'application/json',
-				'Host': hostname
+	const params = {
+				headers: {
+					'Content-Type': 'application/json',
+					'Host': hostname
+					},
 				};
 
 
-	const getResponse = http.get(url, headers);
+	const getResponse = http.get(url, params);
 
 	// Check if the GET request was successful
 	check(getResponse, {
