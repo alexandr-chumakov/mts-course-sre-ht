@@ -40,7 +40,7 @@ export default function () {
 	});
 
 	const randomCityID = randomInt(1, 1107);
-	const getResponseForecastCity = http.get(`${url}/Forecast/${randomCityID}` , params);
+	const getResponseForecastCity = http.get(`${url}/${randomCityID}` , params);
 
 	// Check if the GET request was successful
 	check(getResponseForecastCity, {
