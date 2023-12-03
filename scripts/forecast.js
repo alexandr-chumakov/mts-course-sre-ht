@@ -1,7 +1,7 @@
 import http from 'k6/http';
 import { sleep, check } from 'k6';
 import { parse } from "k6/x/yaml";
-import { randomInt } from 'k6/lib/math';
+
 
 const configfile = open("../config.yaml");
 const config = parse(configfile);
@@ -51,4 +51,7 @@ export default function () {
 	sleep(5);
 }
 
+function randomInt(min, max) {
+  return Math.floor(Math.random() * (max - min + 1) + min);
+}
 
